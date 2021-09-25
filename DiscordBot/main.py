@@ -1,3 +1,4 @@
+import os
 import discord
 from discord import channel
 from discord.ext import commands
@@ -7,7 +8,10 @@ from trie.userRecord import UserRecord
 from trie.trie import Trie
 
 import random
+from dotenv import load_dotenv
 
+load_dotenv()
+TOKEN = os.getenv('TOKEN')
 
 client = discord.Client()
 colors = discord.colour
